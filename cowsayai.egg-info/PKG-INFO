@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: cowsayai
+Version: 0.1.0
+Summary: AI-powered cowsay with wisdom and humor
+Home-page: https://github.com/0xEtherPunk/cowsayAI
+Author: 0xEtherPunk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CowsayAI
+
+[Русская версия](README.ru.md)
+
+A terminal program that combines classic `cowsay` with modern AI to generate wise (or funny) advice.
+
+## Features
+- Random character selection from cowsay collection
+- Text generation using Mistral AI (✨ Free API included! No registration needed!)
+- Colorful output using lolcat
+- Customizable AI persona presets
+- Support for English and Russian languages
+- Works right after installation (no API key needed!)
+
+## Installation
+
+1. Install lolcat:
+   ### Linux (Debian/Ubuntu)
+   ```bash
+   sudo apt-get install lolcat
+   ```
+   ### macOS
+   ```bash
+   brew install lolcat
+   ```
+   ### Windows
+   ```bash
+   # Use WSL (Windows Subsystem for Linux)
+   sudo apt-get install lolcat
+   ```
+
+2. Clone the repository:
+```bash
+git clone https://github.com/0xEtherPunk/cowsayAI.git
+cd cowsayAI
+```
+
+3. Install package:
+```bash
+pip install -e .
+```
+
+## Usage
+
+### Simple run
+For random advice from a random persona:
+```bash
+cowsayai
+```
+
+### Choose specific persona
+```bash
+cowsayai --persona <persona_name>
+```
+
+### List available personas
+```bash
+cowsayai --list
+```
+
+## Available Personas
+
+### English-speaking
+1. **sage** - gives deep life advice using metaphors
+2. **friend** - offers warm and supportive advice with humor
+3. **philosopher** - contemplates life's meaning and big questions
+4. **coach** - gives energetic and motivating advice
+5. **poet** - gives advice in verse form with rhymes
+6. **chef** - uses culinary metaphors for life advice
+7. **traveler** - shares wisdom through journey metaphors
+
+### Russian-speaking
+1. **мудрец** - даёт глубокие жизненные советы с метафорами
+2. **друг** - предлагает теплые и поддерживающие советы с юмором
+3. **философ** - размышляет о смысле жизни и больших вопросах
+4. **тренер** - даёт энергичные и мотивирующие советы
+5. **поэт** - даёт советы в стихотворной форме
+6. **шеф-повар** - использует кулинарные метафоры
+7. **путешественник** - делится мудростью через метафоры путешествий
+
+### Usage Examples:
+```bash
+# For English advice
+cowsayai --persona sage
+
+# For Russian advice
+cowsayai --persona мудрец
+```
+
+### Adding New Personas
+You can add new personas by editing the `PERSONAS` dictionary in `src/persona_manager.py`.
+
+## Dependencies
+- Python 3.8+
+- cowsay
+- requests
+- python-dotenv
+- lolcat
+
+## Troubleshooting
+
+If you get an error when receiving AI response, check:
+- Internet connection
+- API key correctness (if using your own)
+- Mistral API availability
+
+## Contributing
+
+Pull requests are welcome! You can:
+- Add new personas
+- Improve existing prompts
+- Add new features
+- Fix bugs
+
+## License
+
+MIT License
+
