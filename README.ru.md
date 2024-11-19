@@ -12,6 +12,8 @@
 
 ---
 
+<img src="demo.gif" alt="Demo" width="800"/>
+
 </div>
 
 ## ✨ Что Можно Делать?
